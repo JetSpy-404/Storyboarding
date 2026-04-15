@@ -57,33 +57,6 @@ https://templatemo.com/tm-607-glass-admin
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pre-test.html" class="nav-link">
-                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M3 6h18M3 12h18M3 18h18"/>
-                                </svg>
-                                Pre-Test
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="post-test.html" class="nav-link">
-                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M20 6H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2z"/>
-                                    <path d="M8 12h8"/>
-                                </svg>
-                                Post-Test
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="collaboaration.html" class="nav-link">
-                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="3"/>
-                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82"/>
-                                    <path d="M4.6 9a1.65 1.65 0 0 0 .33-1.82"/>
-                                </svg>
-                                Collaboaration
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             <a href="students.html" class="nav-link active">
                                 <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M22 10L12 5 2 10l10 5 10-5z"/>
@@ -500,32 +473,140 @@ https://templatemo.com/tm-607-glass-admin
             'Question 1', 'Question 2', 'Question 3', 'Question 4'
         ];
 
-        // Setup modal close handlers
-        const modalClose = document.getElementById('modalClose');
+        const modal       = document.getElementById('answersModal');
+        const modalClose  = document.getElementById('modalClose');
         const modalCancel = document.getElementById('modalCancel');
         const modalSubmit = document.getElementById('modalSubmit');
-        const modal = document.getElementById('answersModal');
+
+        document.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const container = btn.closest('.view-dropdown-container');
+                const dropdown = container.querySelector('.view-dropdown');
+                // Hide other dropdowns
+                document.querySelectorAll('.view-dropdown').forEach(d => {
+                    if (d !== dropdown) d.style.display = 'none';
+                });
+                // Toggle this dropdown
+                dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        document.querySelectorAll('.dropdown-option').forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.preventDefault();
+                const type = option.dataset.type;
+                const container = option.closest('.view-dropdown-container');
+                const btn = container.querySelector('.view-btn');
+                const dropdown = container.querySelector('.view-dropdown');
+                dropdown.style.display = 'none';
+
+                // Now show modal with selected type
+                const name = btn.dataset.name;
+                const initials = btn.dataset.initials;
+                const section = btn.dataset.section;
+                const grade = btn.dataset.grade;
+                const date = btn.dataset.date;
+                const avatarBg = btn.dataset.avatarBg;
+
+                document.getElementById('modalAvatar').textContent = initials;
+                document.getElementById('modalAvatar').style.background = avatarBg;
+                document.getElementById('modalName').textContent = name;
+                document.getElementById('modalMeta').textContent = section + ' · Grade ' + grade;
+                document.getElementById('modalGrade').textContent = grade;
+                document.getElementById('modalDate').textContent = date;
+
+                // Change modal title based on type
+                const typeTitles = {
+                    'storyboarding': 'Storyboarding Output',
+                    'pre-test': 'Pre-Test Output',
+                    'post-test': 'Post-Test Output'
+                };
+                document.querySelector('.modal-section-title').textContent = typeTitles[type] || 'Activity answers';
+
+                const list = document.getElementById('modalAnswersList');
+                list.innerHTML = '';
+
+                if (type === 'storyboarding') {
+                    const answers = studentAnswers[name] || [];
+                    if (answers.length === 0) {
+                        list.innerHTML = '<p style="color:var(--text-muted);font-size:14px;">No answers submitted yet.</p>';
+                    } else {
+                        const imgs = sectionImages[btn.dataset.section] || defaultImages;
+                        answers.forEach((ans, i) => {
+                            const imgSrc = imgs[i] || defaultImages[i % defaultImages.length];
+                            const item = document.createElement('div');
+                            item.className = 'modal-answer-item';
+                            item.innerHTML = `
+                                <div class="modal-answer-img-skeleton" id="skel-${i}"></div>
+                                <img class="modal-answer-img" id="qimg-${i}" src="${imgSrc}" alt="Question ${i+1} illustration" style="display:none;" />
+                                <div class="modal-answer-q">${questions[i] || 'Question ' + (i+1)}</div>
+                                <div class="modal-answer-text">${ans}</div>
+                                <div class="modal-answer-controls">
+                                    <label>Score</label>
+                                    <input class="modal-score-input" type="number" min="0" max="10" placeholder="0–10">
+                                    <input class="modal-remark-input" type="text" placeholder="Add a remark…">
+                                </div>
+                            `;
+                            list.appendChild(item);
+                            const imgEl = item.querySelector(`#qimg-${i}`);
+                            const skelEl = item.querySelector(`#skel-${i}`);
+                            imgEl.onload = () => { skelEl.style.display = 'none'; imgEl.style.display = 'block'; };
+                            imgEl.onerror = () => { skelEl.style.display = 'none'; };
+                        });
+                    }
+                } else if (type === 'pre-test' || type === 'post-test') {
+                    const scores = studentScores[name] || { pretest: 0, posttest: 0 };
+                    const score = type === 'pre-test' ? scores.pretest : scores.posttest;
+                    const scoreLabel = type === 'pre-test' ? 'Pre-Test Score' : 'Post-Test Score';
+                    list.innerHTML = `
+                        <div class="test-score-section">
+                            <div class="score-display">
+                                <h3>${scoreLabel}</h3>
+                                <div class="score-value">${score}/100</div>
+                                <div class="score-bar">
+                                    <div class="score-fill" style="width: ${score}%"></div>
+                                </div>
+                            </div>
+                            <div class="evaluation-section">
+                                <h4>Evaluation</h4>
+                                <div class="evaluation-controls">
+                                    <label>Overall Score</label>
+                                    <input class="modal-score-input" type="number" min="0" max="100" value="${score}" placeholder="0–100">
+                                    <label>Remarks</label>
+                                    <textarea class="modal-remark-textarea" placeholder="Add evaluation remarks…"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                modalSubmit.textContent = 'Submit review';
+                modalSubmit.disabled = false;
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.view-dropdown').forEach(d => d.style.display = 'none');
+        });
 
         function closeModal() {
             modal.style.display = 'none';
             document.body.style.overflow = '';
         }
 
-        if (modalClose) modalClose.addEventListener('click', closeModal);
-        if (modalCancel) modalCancel.addEventListener('click', closeModal);
-        if (modal) {
-            modal.addEventListener('click', e => {
-                if (e.target === modal) closeModal();
-            });
-        }
+        modalClose.addEventListener('click', closeModal);
+        modalCancel.addEventListener('click', closeModal);
+        modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
 
-        if (modalSubmit) {
-            modalSubmit.addEventListener('click', () => {
-                modalSubmit.textContent = 'Review saved!';
-                modalSubmit.disabled = true;
-                setTimeout(closeModal, 1200);
-            });
-        }
+        modalSubmit.addEventListener('click', () => {
+            modalSubmit.textContent = 'Review saved!';
+            modalSubmit.disabled = true;
+            setTimeout(closeModal, 1200);
+        });
 
         // ===== EDIT STUDENT MODAL FUNCTIONALITY =====
         const editModal = document.getElementById('editStudentModal');

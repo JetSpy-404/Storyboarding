@@ -60,33 +60,6 @@ https://templatemo.com/tm-607-glass-admin
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pre-test.html" class="nav-link">
-                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M3 6h18M3 12h18M3 18h18"/>
-                                </svg>
-                                Pre-Test
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="post-test.html" class="nav-link">
-                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M20 6H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2z"/>
-                                    <path d="M8 12h8"/>
-                                </svg>
-                                Post-Test
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="collaboaration.html" class="nav-link">
-                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="3"/>
-                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82"/>
-                                    <path d="M4.6 9a1.65 1.65 0 0 0 .33-1.82"/>
-                                </svg>
-                                Collaboaration
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             <a href="students.html" class="nav-link">
                                 <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M22 10L12 5 2 10l10 5 10-5z"/>
@@ -306,26 +279,41 @@ https://templatemo.com/tm-607-glass-admin
                                 <span class="y-value">20</span>
                                 <span class="y-value">0</span>
                             </div>
-                            <div class="chart-placeholder">
-                                <div class="chart-bar-group">
-                                    <div class="chart-bar bar-emerald" style="height: 90px;"></div>
-                                    <div class="chart-bar bar-gold" style="height: 120px;"></div>
-                                    <span class="chart-label">Algebra</span>
-                                </div>
-                                <div class="chart-bar-group">
-                                    <div class="chart-bar bar-emerald" style="height: 85px;"></div>
-                                    <div class="chart-bar bar-gold" style="height: 110px;"></div>
-                                    <span class="chart-label">Linear Algebra</span>
-                                </div>
-                                <div class="chart-bar-group">
-                                    <div class="chart-bar bar-emerald" style="height: 88px;"></div>
-                                    <div class="chart-bar bar-gold" style="height: 125px;"></div>
-                                    <span class="chart-label">Geometry</span>
-                                </div>
-                                <div class="chart-bar-group">
-                                    <div class="chart-bar bar-emerald" style="height: 92px;"></div>
-                                    <div class="chart-bar bar-gold" style="height: 130px;"></div>
-                                    <span class="chart-label">Equations</span>
+                            <div class="chart-placeholder" style="display: flex; flex-direction: column; align-items: stretch; gap: 16px; padding: 16px 0;">
+                                <svg viewBox="0 0 560 260" preserveAspectRatio="none" style="width: 100%; height: 260px;">
+                                    <defs>
+                                        <linearGradient id="preGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" stop-color="var(--emerald)" />
+                                            <stop offset="100%" stop-color="var(--success)" />
+                                        </linearGradient>
+                                        <linearGradient id="postGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" stop-color="var(--gold)" />
+                                            <stop offset="100%" stop-color="var(--amber)" />
+                                        </linearGradient>
+                                    </defs>
+                                    <g stroke="rgba(255,255,255,0.12)" stroke-width="1">
+                                        <line x1="40" y1="40" x2="520" y2="40" />
+                                        <line x1="40" y1="90" x2="520" y2="90" />
+                                        <line x1="40" y1="140" x2="520" y2="140" />
+                                        <line x1="40" y1="190" x2="520" y2="190" />
+                                        <line x1="40" y1="240" x2="520" y2="240" />
+                                    </g>
+                                    <path d="M 40 170 L 180 182 L 320 166 L 460 148" fill="none" stroke="url(#preGradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M 40 148 L 180 160 L 320 132 L 460 118" fill="none" stroke="url(#postGradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                                    <circle cx="40" cy="170" r="6" fill="var(--emerald)" />
+                                    <circle cx="180" cy="182" r="6" fill="var(--emerald)" />
+                                    <circle cx="320" cy="166" r="6" fill="var(--emerald)" />
+                                    <circle cx="460" cy="148" r="6" fill="var(--emerald)" />
+                                    <circle cx="40" cy="148" r="6" fill="var(--gold)" />
+                                    <circle cx="180" cy="160" r="6" fill="var(--gold)" />
+                                    <circle cx="320" cy="132" r="6" fill="var(--gold)" />
+                                    <circle cx="460" cy="118" r="6" fill="var(--gold)" />
+                                </svg>
+                                <div style="display: flex; justify-content: space-between; color: #fff; font-size: 0.95rem; margin-top: 8px;">
+                                    <span>Algebra</span>
+                                    <span>Linear Algebra</span>
+                                    <span>Geometry</span>
+                                    <span>Equations</span>
                                 </div>
                             </div>
                         </div>

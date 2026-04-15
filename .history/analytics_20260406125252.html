@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modules</title>
+    <meta name="description" content="3D Glassmorphism Dashboard Template by TemplateMo">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="templatemo-glass-admin-style.css">
+    <!--
+ 
+TemplateMo 607 Glass Admin
+ 
+https://templatemo.com/tm-607-glass-admin
+ 
+-->
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+ 
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">G</div>
+                <span class="logo-text">GlassDash</span>
+            </div>
+ 
+            <ul class="nav-menu">
+                <li class="nav-section">
+                    <span class="nav-section-title">Main Menu</span>
+                    <ul>
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+                                    <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+                                </svg>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="analytics.html" class="nav-link active">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+                                </svg>
+                                Modules
+                                <span class="nav-badge">New</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="students.html" class="nav-link">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 10L12 5 2 10l10 5 10-5z"/>
+                                    <path d="M6 12.5v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/>
+                                    <path d="M22 10v5"/>
+                                </svg>
+                                Students
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="sections.html" class="nav-link active">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+                                </svg>
+                                Sections
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="users.html" class="nav-link">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                                Users
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="settings.html" class="nav-link">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                                </svg>
+                                Settings
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+ 
+                <li class="nav-section">
+                    <span class="nav-section-title">Account</span>
+                    <ul>
+                        <li class="nav-item">
+                            <a href="login.html" class="nav-link">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                                    <polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/>
+                                </svg>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+ 
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="user-avatar">TM</div>
+                    <div class="user-info">
+                        <div class="user-name">Anami</div>
+                        <div class="user-role">Administrator</div>
+                    </div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                </div>
+            </div>
+        </aside>
+ 
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navbar -->
+            <nav class="navbar">
+                <div class="page-header">
+                    <h1 class="page-title">Modules</h1>
+                    <div class="page-breadcrumb">
+                        <a href="index.html">Dashboard</a>
+                        <span>/</span>
+                        <span>Modules</span>
+                    </div>
+                </div>
+                <div class="navbar-right">
+                    <div class="search-box">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                        <input type="text" class="search-input" placeholder="Search anything...">
+                    </div>
+                    <button class="nav-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                        </svg>
+                        <span class="notification-dot"></span>
+                    </button>
+                    <button class="nav-btn" id="theme-toggle" title="Toggle Light/Dark Mode">
+                        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/>
+                            <path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/>
+                            <path d="M2 12h2"/><path d="M20 12h2"/>
+                            <path d="M6.34 17.66l-1.41 1.41"/><path d="M19.07 4.93l-1.41 1.41"/>
+                        </svg>
+                        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+ 
+ 
+            <!-- Scrumboard Section -->
+            <section class="bottom-grid" style="display:block; padding: 0 0 2rem;">
+ 
+                <!-- Scrumboard Header -->
+                <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 1.25rem;">
+                    <div>
+                        <h2 class="card-title" style="font-size:1.1rem; margin:0 0 2px;">Module Board</h2>
+                        <p class="card-subtitle" style="margin:0;">Drag cards across columns to manage module status</p>
+                    </div>
+                    <button class="card-btn" id="openCreateModal" style="display:flex;align-items:center;gap:6px;padding:8px 16px;font-size:13px;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        New Module
+                    </button>
+                </div>
+ 
+                <!-- Kanban Columns -->
+                <div id="scrumboard" style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; align-items:start;">
+ 
+                    <!-- Draft Column -->
+                    <div class="glass-card scrum-col" data-col="draft" style="padding:16px; min-height:300px; border: 1.5px solid #f59e0b;">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+                            <div style="display:flex;align-items:center;gap:8px;">
+                                <span style="width:10px;height:10px;border-radius:50%;background:var(--gold);display:inline-block;"></span>
+                                <span style="font-weight:600;font-size:13px;letter-spacing:.4px;">DRAFT</span>
+                            </div>
+                            <span class="col-count" style="font-size:12px;opacity:.55;" id="count-draft">0</span>
+                        </div>
+                        <div class="scrum-cards" id="col-draft" style="min-height:200px;display:flex;flex-direction:column;gap:10px;"></div>
+                    </div>
+ 
+                    <!-- In Review Column -->
+                    <div class="glass-card scrum-col" data-col="review" style="padding:16px; min-height:300px; border: 1.5px solid #f97316;">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+                            <div style="display:flex;align-items:center;gap:8px;">
+                                <span style="width:10px;height:10px;border-radius:50%;background:var(--coral);display:inline-block;"></span>
+                                <span style="font-weight:600;font-size:13px;letter-spacing:.4px;">IN REVIEW</span>
+                            </div>
+                            <span class="col-count" style="font-size:12px;opacity:.55;" id="count-review">0</span>
+                        </div>
+                        <div class="scrum-cards" id="col-review" style="min-height:200px;display:flex;flex-direction:column;gap:10px;"></div>
+                    </div>
+ 
+                    <!-- Published Column -->
+                    <div class="glass-card scrum-col" data-col="published" style="padding:16px; min-height:300px; border: 1.5px solid #22c55e;">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+                            <div style="display:flex;align-items:center;gap:8px;">
+                                <span style="width:10px;height:10px;border-radius:50%;background:var(--emerald-light);display:inline-block;"></span>
+                                <span style="font-weight:600;font-size:13px;letter-spacing:.4px;">PUBLISHED</span>
+                            </div>
+                            <span class="col-count" style="font-size:12px;opacity:.55;" id="count-published">0</span>
+                        </div>
+                        <div class="scrum-cards" id="col-published" style="min-height:200px;display:flex;flex-direction:column;gap:10px;"></div>
+                    </div>
+                </div>
+            </section>
+ 
+            <!-- Create Module Modal -->
+            <div id="moduleModal" style="display:none;position:fixed;inset:0;z-index:1000;background:#3b82f6(0,0,0,.55);backdrop-filter:blur(4px);align-items:center;justify-content:center;">
+                <div style="background:var(--glass-bg,rgba(20,24,40,.97));border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:28px 28px 24px;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;box-shadow:0 24px 60px rgba(0,0,0,.45);">
+                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+                        <h3 style="margin:0;font-size:1rem;font-weight:600;" id="modalTitle">Create Module</h3>
+                        <button id="closeModal" style="background:none;border:none;cursor:pointer;opacity:.6;color:inherit;padding:4px;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                        </button>
+                    </div>
+ 
+                    <!-- Module Title -->
+                    <div style="margin-bottom:14px;">
+                        <label style="font-size:12px;opacity:.65;display:block;margin-bottom:5px;">Module Title *</label>
+                        <input id="modTitle" type="text" placeholder="e.g. Introduction to Algebra" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:9px 12px;color:inherit;font-size:13px;outline:none;">
+                    </div>
+ 
+                    <!-- Overview -->
+                    <div style="margin-bottom:14px;">
+                        <label style="font-size:12px;opacity:.65;display:block;margin-bottom:5px;">Overview</label>
+                        <textarea id="modOverview" rows="3" placeholder="Describe what students will learn in this module..." style="width:100%;box-sizing:border-box;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:9px 12px;color:inherit;font-size:13px;outline:none;resize:vertical;font-family:inherit;"></textarea>
+                    </div>
+ 
+                    <!-- Subject Tag -->
+                    <div style="margin-bottom:20px;">
+                        <label style="font-size:12px;opacity:.65;display:block;margin-bottom:5px;">Subject Tag</label>
+                        <input id="modTag" type="text" placeholder="e.g. Math, Science, History..." style="width:100%;box-sizing:border-box;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:9px 12px;color:inherit;font-size:13px;outline:none;">
+                    </div>
+ 
+                    <!-- Questions -->
+                    <div style="margin-bottom:16px;">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+                            <label style="font-size:12px;opacity:.65;">Questions & Hints</label>
+                            <button id="addQuestion" style="font-size:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:6px;padding:4px 10px;cursor:pointer;color:inherit;display:flex;align-items:center;gap:4px;">
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                                Add
+                            </button>
+                        </div>
+                        <div id="questionsContainer" style="display:flex;flex-direction:column;gap:10px;"></div>
+                    </div>
+ 
+                    <!-- Footer -->
+                    <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);">
+                        <button id="cancelModal" class="card-btn">Cancel</button>
+                        <button id="saveModule" style="background:linear-gradient(135deg,var(--emerald-light,#2dd4bf),var(--emerald,#10b981));border:none;border-radius:8px;padding:9px 20px;font-size:13px;font-weight:600;color:#fff;cursor:pointer;">Save Module</button>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- View Module Modal -->
+            <div id="viewModal" style="display:none;position:fixed;inset:0;z-index:1000;background:#3b82f6(0,0,0,.55);backdrop-filter:blur(4px);align-items:center;justify-content:center;">
+                <div style="background:var(--glass-bg,rgba(20,24,40,.97));border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:28px;width:100%;max-width:520px;max-height:88vh;overflow-y:auto;box-shadow:0 24px 60px rgba(0,0,0,.45);">
+                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;">
+                        <span id="viewTag" style="font-size:11px;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.1);font-weight:500;"></span>
+                        <button id="closeViewModal" style="background:none;border:none;cursor:pointer;opacity:.6;color:inherit;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                        </button>
+                    </div>
+                    <h3 id="viewTitle" style="margin:8px 0 4px;font-size:1.1rem;font-weight:600;"></h3>
+                    <p id="viewOverview" style="font-size:13px;opacity:.7;line-height:1.6;margin:0 0 20px;"></p>
+                    <div id="viewQuestions" style="display:flex;flex-direction:column;gap:10px;"></div>
+                    <div style="display:flex;gap:10px;margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);">
+                        <button id="editFromView" class="card-btn" style="flex:1;">Edit</button>
+                        <button id="deleteFromView" style="flex:1;background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);border-radius:8px;padding:9px 16px;font-size:13px;color:#f87171;cursor:pointer;">Delete</button>
+                    </div>
+                </div>
+            </div>
+ 
+            <style>
+                .scrum-card {
+                    background: #3b82f6(255,255,255,.05);
+                    border: 1px solid rgba(255,255,255,.1);
+                    border-radius: 10px;
+                    padding: 12px 14px;
+                    cursor: grab;
+                    transition: transform .15s, box-shadow .15s;
+                    user-select: none;
+                }
+                .scrum-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.3); }
+                .scrum-card.dragging { opacity:.4; cursor:grabbing; }
+                .scrum-col.drag-over > .scrum-cards { outline: 2px dashed rgba(255,255,255,.25); border-radius:8px; }
+                .scrum-card-title { font-weight: 600; font-size: 13px; margin: 0 0 5px; }
+                .scrum-card-overview { font-size: 12px; opacity: .6; margin: 0 0 10px; line-height:1.5; display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden; }
+                .scrum-card-footer { display:flex; align-items:center; justify-content:space-between; }
+                .scrum-tag { font-size:11px; padding:2px 8px; border-radius:20px; background:rgba(255,255,255,.1); }
+                .scrum-q-count { font-size:11px; opacity:.5; display:flex; align-items:center; gap:4px; }
+                .q-row { background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.1); border-radius:8px; padding:10px 12px; }
+                .q-label { font-size:11px; opacity:.5; margin-bottom:3px; }
+                .q-text { font-size:13px; margin:0 0 2px; }
+                .q-hint { font-size:12px; opacity:.6; font-style:italic; }
+            </style>
+ 
+            <script>
+            (function(){
+                let modules = [
+                    { id: 1, title: 'Introduction to Algebra', overview: 'Covers variables, expressions, and simple equations to build a foundation in algebraic thinking.', tag: 'Math', col: 'published', questions: [
+                        { q: 'What is a variable?', hint: 'Think of it as a placeholder for an unknown number.' },
+                        { q: 'Solve: 2x + 3 = 11', hint: 'Isolate x by subtracting 3 from both sides first.' }
+                    ]},
+                    { id: 2, title: 'The Water Cycle', overview: 'Explores evaporation, condensation, precipitation, and runoff as part of Earth\'s water system.', tag: 'Science', col: 'review', questions: [
+                        { q: 'What causes evaporation?', hint: 'Consider the role of heat energy from the sun.' }
+                    ]},
+                    { id: 3, title: 'Essay Writing Basics', overview: 'Teaches students how to structure a five-paragraph essay with a clear thesis and supporting evidence.', tag: 'English', col: 'draft', questions: [
+                        { q: 'What is a thesis statement?', hint: 'It is the central argument of your essay, usually in the intro.' },
+                        { q: 'How many body paragraphs does a 5-paragraph essay have?', hint: 'Count total paragraphs and subtract intro & conclusion.' }
+                    ]}
+                ];
+                let nextId = 4;
+                let editingId = null;
+                let viewingId = null;
+                let dragId = null;
+ 
+                function render() {
+                    ['draft','review','published'].forEach(col => {
+                        const container = document.getElementById('col-' + col);
+                        const mods = modules.filter(m => m.col === col);
+                        document.getElementById('count-' + col).textContent = mods.length;
+                        container.innerHTML = '';
+                        if (mods.length === 0) {
+                            container.innerHTML = '<p style="font-size:12px;opacity:.35;text-align:center;margin:24px 0;">Drop modules here</p>';
+                        }
+                        mods.forEach(mod => {
+                            const card = document.createElement('div');
+                            card.className = 'scrum-card';
+                            card.draggable = true;
+                            card.dataset.id = mod.id;
+                            card.innerHTML = `
+                                <p class="scrum-card-title">${mod.title}</p>
+                                <p class="scrum-card-overview">${mod.overview || 'No overview provided.'}</p>
+                                <div class="scrum-card-footer">
+                                    <span class="scrum-tag">${mod.tag || 'General'}</span>
+                                    <span class="scrum-q-count">
+                                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                                        ${mod.questions.length} question${mod.questions.length !== 1 ? 's' : ''}
+                                    </span>
+                                </div>`;
+                            card.addEventListener('dragstart', e => { dragId = mod.id; card.classList.add('dragging'); });
+                            card.addEventListener('dragend', () => { dragId = null; card.classList.remove('dragging'); document.querySelectorAll('.scrum-col').forEach(c=>c.classList.remove('drag-over')); });
+                            card.addEventListener('click', () => openView(mod.id));
+                            container.appendChild(card);
+                        });
+                    });
+                }
+ 
+                document.querySelectorAll('.scrum-col').forEach(col => {
+                    col.addEventListener('dragover', e => { e.preventDefault(); col.classList.add('drag-over'); });
+                    col.addEventListener('dragleave', () => col.classList.remove('drag-over'));
+                    col.addEventListener('drop', e => {
+                        e.preventDefault();
+                        col.classList.remove('drag-over');
+                        if (dragId) {
+                            const mod = modules.find(m => m.id === dragId);
+                            if (mod) { mod.col = col.dataset.col; render(); }
+                        }
+                    });
+                });
+ 
+                function openCreate() {
+                    editingId = null;
+                    document.getElementById('modalTitle').textContent = 'Create Module';
+                    document.getElementById('modTitle').value = '';
+                    document.getElementById('modOverview').value = '';
+                    document.getElementById('modTag').value = '';
+                    document.getElementById('questionsContainer').innerHTML = '';
+                    document.getElementById('moduleModal').style.display = 'flex';
+                }
+ 
+                function openEdit(id) {
+                    const mod = modules.find(m => m.id === id);
+                    if (!mod) return;
+                    editingId = id;
+                    document.getElementById('modalTitle').textContent = 'Edit Module';
+                    document.getElementById('modTitle').value = mod.title;
+                    document.getElementById('modOverview').value = mod.overview;
+                    document.getElementById('modTag').value = mod.tag;
+                    const qc = document.getElementById('questionsContainer');
+                    qc.innerHTML = '';
+                    mod.questions.forEach(q => addQuestionRow(q.q, q.hint));
+                    document.getElementById('viewModal').style.display = 'none';
+                    document.getElementById('moduleModal').style.display = 'flex';
+                }
+ 
+                function openView(id) {
+                    const mod = modules.find(m => m.id === id);
+                    if (!mod) return;
+                    viewingId = id;
+                    document.getElementById('viewTag').textContent = mod.tag || 'General';
+                    document.getElementById('viewTitle').textContent = mod.title;
+                    document.getElementById('viewOverview').textContent = mod.overview || 'No overview provided.';
+                    const qContainer = document.getElementById('viewQuestions');
+                    qContainer.innerHTML = '';
+                    if (mod.questions.length === 0) {
+                        qContainer.innerHTML = '<p style="font-size:12px;opacity:.4;">No questions added yet.</p>';
+                    }
+                    mod.questions.forEach((q, i) => {
+                        const el = document.createElement('div');
+                        el.className = 'q-row';
+                        el.innerHTML = `<p class="q-label">Question ${i+1}</p><p class="q-text">${q.q}</p>${q.hint ? `<p class="q-hint">Hint: ${q.hint}</p>` : ''}`;
+                        qContainer.appendChild(el);
+                    });
+                    document.getElementById('viewModal').style.display = 'flex';
+                }
+ 
+                function addQuestionRow(qVal, hVal) {
+                    const qc = document.getElementById('questionsContainer');
+                    const row = document.createElement('div');
+                    row.className = 'q-row';
+                    row.style.position = 'relative';
+                    row.innerHTML = `
+                        <button style="position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;opacity:.4;color:inherit;" class="rm-q">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                        </button>
+                        <p class="q-label">Question</p>
+                        <input type="text" class="q-input" placeholder="Type your question..." value="${qVal||''}" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:6px;padding:7px 10px;color:inherit;font-size:13px;outline:none;margin-bottom:8px;">
+                        <p class="q-label">Hint</p>
+                        <input type="text" class="h-input" placeholder="Optional hint for students..." value="${hVal||''}" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:6px;padding:7px 10px;color:inherit;font-size:13px;outline:none;">`;
+                    row.querySelector('.rm-q').addEventListener('click', () => row.remove());
+                    qc.appendChild(row);
+                }
+ 
+                document.getElementById('openCreateModal').addEventListener('click', openCreate);
+                document.getElementById('closeModal').addEventListener('click', () => document.getElementById('moduleModal').style.display = 'none');
+                document.getElementById('cancelModal').addEventListener('click', () => document.getElementById('moduleModal').style.display = 'none');
+                document.getElementById('addQuestion').addEventListener('click', () => addQuestionRow('',''));
+                document.getElementById('closeViewModal').addEventListener('click', () => document.getElementById('viewModal').style.display = 'none');
+                document.getElementById('editFromView').addEventListener('click', () => openEdit(viewingId));
+                document.getElementById('deleteFromView').addEventListener('click', () => {
+                    modules = modules.filter(m => m.id !== viewingId);
+                    document.getElementById('viewModal').style.display = 'none';
+                    render();
+                });
+ 
+                document.getElementById('saveModule').addEventListener('click', () => {
+                    const title = document.getElementById('modTitle').value.trim();
+                    if (!title) { document.getElementById('modTitle').style.borderColor='var(--coral)'; return; }
+                    document.getElementById('modTitle').style.borderColor='';
+                    const overview = document.getElementById('modOverview').value.trim();
+                    const tag = document.getElementById('modTag').value.trim();
+                    const questions = [];
+                    document.querySelectorAll('#questionsContainer .q-row').forEach(row => {
+                        const q = row.querySelector('.q-input').value.trim();
+                        const h = row.querySelector('.h-input').value.trim();
+                        if (q) questions.push({ q, hint: h });
+                    });
+                    if (editingId !== null) {
+                        const mod = modules.find(m => m.id === editingId);
+                        if (mod) { mod.title = title; mod.overview = overview; mod.tag = tag; mod.questions = questions; }
+                    } else {
+                        modules.push({ id: nextId++, title, overview, tag: tag || 'General', col: 'draft', questions });
+                    }
+                    document.getElementById('moduleModal').style.display = 'none';
+                    render();
+                });
+ 
+                render();
+            })();
+            </script>
+        </main>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>Copyright © 2026 Your Company. Designed by <a href="https://templatemo.com" target="_blank" rel="nofollow">TemplateMo</a></p>
+    </footer>
+
+    <script src="templatemo-glass-admin-script.js"></script>
+    <!-- TemplateMo 607 Glass Admin -->
+</body>
+</html>
